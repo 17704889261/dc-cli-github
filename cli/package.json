@@ -1,0 +1,42 @@
+{
+  "name": "bonc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin/cli.js",
+  "files": [
+    "bin/",
+    "config/",
+    "utils/",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "login": "node build/login.js",
+    "pub": "npm version patch && node build/login.js && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "cross-spawn": "^7.0.3",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.6",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "ora": "5.4.1"
+  },
+  "devDependencies": {
+    "babel-register": "^6.26.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1"
+  }
+}
