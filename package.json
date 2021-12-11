@@ -3,9 +3,6 @@
   "version": "0.0.4",
   "main": "index.js",
   "bin": "./bin/cli.js",
-  "publishConfig": {
-    "registry": "http://yum.bonc.local/nexus/repository/npm-hosted"
-  },
   "files": [
     "bin/",
     "config/",
