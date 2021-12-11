@@ -1,19 +1,19 @@
 # 一、使用
-## 1. 安装脚手架 DC-CLI
-```npm i -g dc-cli@0.0.4 --registry=http://yum.bonc.local/nexus/repository/npm-public```
+## 1. 安装脚手架 mrthree-cli
+```npm i -g mrthree-cli```
 > 提示：目前只有版本 0.0.2 可以使用
 
 ## 2. 使用脚手架创建项目
 
-使用命令 `dc-cli create` 项目名字  
+使用命令 `mrthree-cli create` 项目名字  
 > 两个参数：
 > 1. -f/--force  
 是否覆盖与项目同名的目录,默认: `false` 加上 `-f` 等价于`--fore=true`
-`dc-cli create vue -f`
+`mrthree-cli create vue -f`
 
 > 2. -t/--template  
 后面跟项目的模板名称 类似 vite 那种形式 默认: vue2-ts-webpack 
-`dc-cli create vue --template=vue2-ts-webpack`
+`mrthree-cli create vue --template=vue2-ts-webpack`
 
 # 二、开发维护优化
 
@@ -157,5 +157,5 @@ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 https://juejin.cn/post/6966119324478079007
 # 六、存在的问题
 1.下载模板期间可能会询问，git的用户名和密码。如果这个时候出错 或者是 推出程序。需要手动在终端 ctrl + C 终止程序。
-2.目前 npm 安装只能用 dc-cli@0.0.2 这种形式 必须加上版本号。
+2.目前 npm 安装只能用 mrthree-cli@0.0.2 这种形式 必须加上版本号。
 3.更新全局包需要手动卸载在安装。
