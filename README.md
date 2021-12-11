@@ -1,6 +1,6 @@
 # 一、使用
 ## 1. 安装脚手架 DC-CLI
-```npm i -g dc-cli@0.0.2 --registry=http://yum.bonc.local/nexus/repository/npm-public```
+```npm i -g dc-cli@0.0.4 --registry=http://yum.bonc.local/nexus/repository/npm-public```
 > 提示：目前只有版本 0.0.2 可以使用
 
 ## 2. 使用脚手架创建项目
@@ -143,9 +143,19 @@ function installDependencies(cwd = './') {
 上传npm包地址: http://yum.bonc.local/nexus/repository/npm-hosted  
 安装npm包地址：http://yum.bonc.local/nexus/repository/npm-public  
 > 上传和下载两个地址不一样需要加以区分。
-# 四、参考文章 
+
+# 四、changelog
+> verison 脚本 会在 `npm version [major | minor | patch]` 执行后自动执行。
+每升级一个版本号就会在本地打一个tag，根据tag生成版本的更改日志。
+```
+// 在上次提交的基础上新增
+conventional-changelog -p angular -i CHANGELOG.md -s
+// 覆盖原有的生成新的日志
+conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+```
+# 五、参考文章 
 https://juejin.cn/post/6966119324478079007
-# 五、存在的问题
+# 六、存在的问题
 1.下载模板期间可能会询问，git的用户名和密码。如果这个时候出错 或者是 推出程序。需要手动在终端 ctrl + C 终止程序。
 2.目前 npm 安装只能用 dc-cli@0.0.2 这种形式 必须加上版本号。
 3.更新全局包需要手动卸载在安装。

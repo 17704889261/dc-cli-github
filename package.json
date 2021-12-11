@@ -1,6 +1,6 @@
 {
   "name": "dc-cli",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "main": "index.js",
   "bin": "./bin/cli.js",
   "publishConfig": {
@@ -15,8 +15,10 @@
   ],
   "scripts": {
     "prepare": "husky install",
+    "commit": "git cz",
     "login": "node build/login.js",
     "pub": "npm version patch && node build/login.js && npm publish",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "lint-staged": "lint-staged"
   },
   "dependencies": {
@@ -49,6 +51,11 @@
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   },
   "lint-staged": {
     "*.{js,vue,ts}": [

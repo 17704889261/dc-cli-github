@@ -2,7 +2,7 @@ const path = require('path');
 const output = require('../utils/output');
 const { logoDefault } = require('../utils/logo');
 const template = require('../utils/templates');
-const { installDependencies } = require('../utils/shell');
+const { installDependencies, gitInit } = require('../utils/shell');
 
 const project = {
     name: '',
@@ -44,8 +44,12 @@ async function createProject(projectName, options) {
 
         /**
          * 3
-         * 安装依赖
+         * git init -> 安装依赖
          */
+        const initRes = await gitInit(this.path);
+        if (!initRes) {
+            output.error('git 初始化失败！');
+        }
         const res = installDependencies(this.path);
         if (res) {
             output.success('项目创建成功！');
